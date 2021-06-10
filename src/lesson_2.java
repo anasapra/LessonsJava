@@ -14,6 +14,36 @@
 
 public class lesson_2 {
     public static void main (String[] args) {
-
+        System.out.println( "1 *********************************" );
+System.out.println("Check 10=<(a + b)<=20 = " + checkPositiveSum(5, 10));
+        System.out.println( "2 *********************************" );
+        printInt(0);
+        System.out.println( "3 *********************************" );
+        System.out.println(checkPositiveNum(2));
+        System.out.println( "4 *********************************" );
+printRepeatText( "Wait for friday!",  5);
+        System.out.println( "5 *********************************" );
+        System.out.println(checkLeapYear(2016));
     }
+    private static boolean checkPositiveSum(int a, int b) {
+        return (a + b) >= 10 && (a + b) <= 20;
+}
+public static void printInt(int number) {
+        if (number >= 0) {
+            System.out.println("Positive");
+        }  else {
+            System.out.println("Negative");
+        }
+}
+public static boolean checkPositiveNum(int a) {
+        return a < 0;
+}
+public static void printRepeatText(String text, int repeatText) {
+      for (int i = 0; i < repeatText; i++ ) {
+          System.out.println(text);
+      }
+}
+public static boolean checkLeapYear(int year) {
+        return(year % 4 == 0 && year % 100 != 0) || year % 400 ==0;
+}
 }
