@@ -11,20 +11,21 @@
 // Если a больше или равно b, то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;
 //
 public class lesson_1 {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         printThreeWords();
-        System.out.println( "*********************************" );
+        System.out.println("*********************************");
         checkSumSign(-20, 10);
-        System.out.println( "*********************************" );
+        System.out.println("*********************************");
         System.out.println(printColor(200));
-        System.out.println( "*********************************" );
-        System.out.println (compareNumbers(20, 30));
+        System.out.println("*********************************");
+        System.out.println(compareNumbers(20, 30));
 
     }
+
     public static void printThreeWords() {
-        System.out.println( "Orange" );
-        System.out.println( "Banana" );
-        System.out.println( "Apple" );
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
     }
 
     public static void checkSumSign(int a, int b) {
@@ -34,21 +35,22 @@ public class lesson_1 {
             System.out.println("Sum negative");
         }
     }
+
     public static String printColor(int value) {
         if (value <= 0) {
             return "Red";
         } else if (value > 0 && value <= 100) {
             return "Yellow";
-        } else  {
+        } else {
             return "Green";
         }
 
     }
+
     public static String compareNumbers(int a, int b) {
-        if ( a>= b) {
+        if (a >= b) {
             return "a >= b";
-        }
-        else  {
+        } else {
             return "a < b";
         }
 
