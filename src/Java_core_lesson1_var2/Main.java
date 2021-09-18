@@ -1,4 +1,4 @@
-package lesson2_1;
+package Java_core_lesson1_var2;
 //1. Разобраться с имеющимся кодом.
 //        2. Добавить класс Team, который будет содержать:
 //        название команды;
@@ -16,16 +16,22 @@ package lesson2_1;
 //        team.showResults(); // Показываем результаты
 //        }
 
-public class Main {
-public static class Team {
-    public String title;
+//public class Main {
+//
+//public static class Team {
+//    public static void main(String[] args) {
+//
+//
+//    public String title;
+//
+//}
+//
+//    public static void main(String[] args) {
+//        Team team = new Team();
+//        team.title = "Winners";
+//        System.out.println(team.title.toString());
+//    }
+//
+//}
+//}
 
-}
-
-    public static void main(String[] args) {
-        Team team = new Team();
-        team.title = "Winners";
-
-    }
-    System.out.
-}

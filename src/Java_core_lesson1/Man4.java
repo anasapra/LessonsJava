@@ -1,6 +1,6 @@
-package Java_core.lesson1;
+package Java_core_lesson1;
 
-public class Man4 implements doIt {
+public class Man4 implements Team {
     private int jumpHeight;
     private int runLength;
 
