@@ -8,7 +8,10 @@ public class Man2 implements Team {
         this.jumpHeight = jumpHeight;
         this.runLength = runLength;
     }
-
+    @Override
+    public String toString() {
+        return "TeamMember Man2";
+    }
     @Override
     public void jump(int height) {
         if (height > jumpHeight) {

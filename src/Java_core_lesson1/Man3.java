@@ -10,6 +10,10 @@ public class Man3 implements Team {
     }
 
     @Override
+    public String toString() {
+        return "TeamMember Man3";
+    }
+    @Override
     public void jump(int height) {
         if (height > jumpHeight) {
             System.out.println("Я спортсмен 3, я не перепрыгнул стену!");
