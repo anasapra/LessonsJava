@@ -15,10 +15,41 @@ package Java_core_lesson1_var3;
 //        team.showResults(); // Показываем результаты
 //        }
 public class Team {
-    private String title;
-    public static void main(String[] args) {
-        Team team = new Team();
-        team.title = "Новые люди";
-}
+    private String male;
+    private String name;
+    private float maxRun;
+    private float maxSwim;
+    public static int countTeamMember = 0;
+    Team(String male, String name, float maxRun, float maxSwim) {
+        this.male = male;
+        this.name = name;
+        this.maxRun = maxRun;
+        this.maxSwim = maxSwim;
+        ++countTeamMember;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    String getType() {
+        return this.male;
+    }
+
+    float getMaxRun() {
+        return this.maxRun;
+    }
+
+    float getMaxSwim() {
+        return this.maxSwim;
+    }
+
+    protected boolean run(float distance) {
+        return (distance <= maxRun);
+    }
+
+    protected boolean swim(float distance) {
+        return (distance <= maxSwim);
+    }
 
 }

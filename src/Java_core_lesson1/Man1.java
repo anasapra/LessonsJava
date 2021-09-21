@@ -8,6 +8,9 @@ public class Man1 implements Team {
         this.jumpHeight = jumpHeight;
         this.runLength = runLength;
     }
+
+    int getJumpHeight() { return this.jumpHeight; }
+    int getRunLength() { return this.runLength; }
    @Override
     public String toString() {
         return "TeamMember Man1";

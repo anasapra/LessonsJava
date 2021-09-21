@@ -16,22 +16,22 @@ package Java_core_lesson1_var2;
 //        team.showResults(); // Показываем результаты
 //        }
 
-//public class Main {
-//
-//public static class Team {
-//    public static void main(String[] args) {
-//
-//
-//    public String title;
-//
-//}
-//
-//    public static void main(String[] args) {
-//        Team team = new Team();
-//        team.title = "Winners";
-//        System.out.println(team.title.toString());
-//    }
-//
-//}
-//}
+public class Main {
+
+public static class Team {
+    public static void main(String[] args) {
+
+
+    public String title;
+
+}
+
+    public static void main(String[] args) {
+        Team team = new Team();
+        team.title = "Winners";
+        System.out.println("Имя команды" + team.title);
+    }
+
+}
+}
 
