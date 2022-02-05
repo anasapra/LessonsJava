@@ -16,41 +16,26 @@ package Java_core_lesson1_var3;
 //        team.showResults(); // Показываем результаты
 //        }
 public class Main {
+
     public static void main(String[] args) {
+        Course c = new Course("run 100 m", "swim 50m", "cycle 3km"); // Создаем препятствия вариант1
+        Course[] c2 = {new Course(100), new Course(30), new Course(70)}; // Создаем препятствия вариант2
+        // Какой вариант создания массива предпочтительнее?
 
-        String tempWinEvent = " это получилось";
-        String tempLossEvent = " это не получилось";
-        String eventName;
-        String eventResult;
-Team teamMember1 = new Team("woman", "Anna", 100, 25);
-Team teamMember2 = new Team("woman", "Yana", 105, 28);
-Team teamMember3 = new Team("men", "Andrey", 150, 50);
-Team teamMember4 = new Team("men", "Ivan", 150, 50);
+        Team team1 = new Team("Winners", "Ivan", "Petr", "Alex", "Lena"); // Создаем команду
+        Team team2 = new Team("Losers", "Anton", "Kate", "Anna", "Diana"); // Создаем команду
 
-Team[] teams = {teamMember1, teamMember2, teamMember3, teamMember4};
+        team1.showInfo(); // инфо о всех участниках через метод
+        System.out.println(team2); // инфо о всех через переопределенный toString
 
-        float runLength = 250;
-        float swimLength = 10;
+        c.doIt(team1);
 
-        for (int i = 0; i < teams.length; i++) {
-            String nameString = teams[i].getType() + " " + teams[i].getName() + " может ";
-
-            eventName = "пробежать на " + teams[i].getMaxRun() + " м. Пытается пробежать на ";
-            eventResult = teams[i].run(runLength) ? tempWinEvent : tempLossEvent;
-            result(nameString, eventName, runLength, eventResult);
-
-            boolean swimResult = teams[i].swim(swimLength);
-            eventName = "проплыть на " + teams[i].getMaxSwim() + " м. Попытка проплыть на ";
-            eventResult = (swimResult == Team.SWIM_OK) ? tempWinEvent : tempLossEvent;
-
-            result(nameString, eventName, swimLength, eventResult);
-
+        for (int i = 0; i < c2.length; i++) { // бегут по препятс
+            team1.run(c2[i].getLength());
+            team2.run(c2[i].getLength());
         }
-        System.out.println("All TeamMembers = " + Team.countTeamMember);
-    }
 
-    private static void result(String nameAnimal, String event, float eventLength, String resultEvent) {
-        System.out.println(nameAnimal + event + eventLength + " м и" + resultEvent);
+        team1.showResults(); // показываем результаты
     }
 
 }

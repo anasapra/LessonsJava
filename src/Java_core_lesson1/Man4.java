@@ -1,8 +1,8 @@
 package Java_core_lesson1;
 
 public class Man4 implements Team {
-    private int jumpHeight;
-    private int runLength;
+    protected int jumpHeight;
+    protected int runLength;
 
     public Man4(int jumpHeight, int runLength) {
         this.jumpHeight = jumpHeight;

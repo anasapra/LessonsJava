@@ -11,3 +11,4 @@ public class Distance implements Course {
     }
 
 }
+//перезаливка дз с прошлого потока

@@ -4,3 +4,4 @@ public interface Course {
     static void overcome(Team team) {
     }
 }
+//перезаливка дз с прошлого потока

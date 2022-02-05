@@ -35,3 +35,4 @@ public class Man1 implements Team {
     }
 
 }
+//перезаливка дз с прошлого потока
