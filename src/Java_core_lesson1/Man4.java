@@ -1,13 +1,22 @@
 package Java_core_lesson1;
 
 public class Man4 implements Team {
-    private int jumpHeight;
-    private int runLength;
+    protected int jumpHeight;
+    protected int runLength;
 
     public Man4(int jumpHeight, int runLength) {
         this.jumpHeight = jumpHeight;
         this.runLength = runLength;
     }
+
+    int getJumpHeight() { return this.jumpHeight; }
+    int getRunLength() { return this.runLength; }
+
+    @Override
+    public String toString() {
+        return "TeamMember Man4";
+    }
+
     @Override
     public void jump(int height) {
         if (height > jumpHeight) {

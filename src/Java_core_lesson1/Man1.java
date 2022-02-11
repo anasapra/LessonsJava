@@ -9,6 +9,13 @@ public class Man1 implements Team {
         this.runLength = runLength;
     }
 
+    int getJumpHeight() { return this.jumpHeight; }
+    int getRunLength() { return this.runLength; }
+   @Override
+    public String toString() {
+        return "TeamMember Man1";
+    }
+
     @Override
     public void jump(int height) {
         if (height > jumpHeight) {
@@ -28,3 +35,4 @@ public class Man1 implements Team {
     }
 
 }
+//перезаливка дз с прошлого потока
