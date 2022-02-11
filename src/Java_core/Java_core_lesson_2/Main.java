@@ -11,13 +11,13 @@ package Java_core.Java_core_lesson_2;
 //        MyArrayDataException и вывести результат расчета.
 
 public class Main {
-    public static int arraySum(String[][] twoDimentionalArray) throws MyArraySizeException {
+    public static int arraySum(String[][] twoDimentionalArray) throws MyArraySizeException, MyArrayDataException {
         if (twoDimentionalArray.length != 4) {
-            throw new MyArraySizeException("Длина1 массива не равна 4");
+            throw new MyArraySizeException("Длина массива не равна 4");
         }
         for (String[] array : twoDimentionalArray) {
             if (array.length != 4) {
-                throw new MyArraySizeException("Длина2 массива не равна 4");
+                throw new MyArraySizeException("Высота массива не равна 4");
             }
         }
         int sum = 0;
@@ -26,7 +26,7 @@ public class Main {
                 try {
                     sum += Integer.parseInt(twoDimentionalArray[i][j]);
                 } catch (NumberFormatException e) {
-                    throw new MyArraySizeException("Не число в элементе: " + i + "," + j);
+                    throw new MyArrayDataException("Не число в элементе: " + i + "," + j);
                 }
             }
         }
@@ -40,7 +40,11 @@ public class Main {
                         {"1", "2", "3", "4"},
                         {"1", "2", "3", "4"}};
         try {
-            System.out.println(arraySum(correctArray));
+            try {
+                System.out.println(arraySum(correctArray));
+            } catch (MyArrayDataException e) {
+                e.printStackTrace();
+            }
         } catch (MyArraySizeException e) {
             e.printStackTrace();
         }
@@ -52,6 +56,8 @@ public class Main {
         try {
             System.out.println(arraySum(inCorrectArray));
         } catch (MyArraySizeException e) {
+            e.printStackTrace();
+        } catch (MyArrayDataException e) {
             e.printStackTrace();
         }
     }
