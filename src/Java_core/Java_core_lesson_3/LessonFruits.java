@@ -1,4 +1,4 @@
-package Java_core_lesson_3;
+package Java_core.Java_core_lesson_3;
 
 import java.util.Arrays;
 
@@ -23,8 +23,10 @@ public class LessonFruits {
         Object tmp = array[a];
         array[a] = array[b];
         array[b] = tmp;
-        System.out.println(Arrays.toString(array));
+
     }
+
+
     public static void main(String[] args) {
         Box<Apple> appleBox = new Box<>();
         appleBox.addFruit(new Apple(1));
@@ -42,8 +44,8 @@ public class LessonFruits {
     }
 
 
-        Box<Orange> orangeBox1 = new Box<>();
-        Box<Orange> orangeBox2 = new Box<>();
+    Box<Orange> orangeBox1 = new Box<>();
+    Box<Orange> orangeBox2 = new Box<>();
 //        orangeBox1.addFruit(new Orange());
 //        orangeBox2.addFruit(new Orange());
 //
@@ -53,7 +55,6 @@ public class LessonFruits {
 //        orangeBox1.pourOver(orangeBox2); // пересыпаем коробки
 //        System.out.println(orangeBox2.toString());
 //        System.out.println(orangeBox1.toString());
-
 
 
 }

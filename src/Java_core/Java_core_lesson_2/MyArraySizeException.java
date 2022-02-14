@@ -5,3 +5,4 @@ public class MyArraySizeException extends Exception {
         super(message);
     }
 }
+//перезаливка дз с исправлением замечаний
