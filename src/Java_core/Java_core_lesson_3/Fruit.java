@@ -1,7 +1,7 @@
-package Java_core_lesson_3;
+package Java_core.Java_core_lesson_3;
 
 public abstract class Fruit {
-    private  int amount;
+    private int amount;
     private float weight;
 
     public Fruit(float weight) {
